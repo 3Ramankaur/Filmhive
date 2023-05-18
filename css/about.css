@@ -1,0 +1,51 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+}
+.navbar {
+    background-color: #343a40;
+}
+.navbar-brand {
+    color: #f8f9fa;
+}
+.hero-section {
+    background-color: #17a2b8;
+    color: white;
+    padding: 50px 0;
+}
+.hero-section .lead {
+    font-size: 1.3em;
+}
+.team-section {
+    padding: 50px 0;
+}
+.team-section h4 {
+    color: #17a2b8;
+    margin-bottom: 20px;
+}
+.team-section .icon {
+    font-size: 3em;
+    color: #17a2b8;
+    margin-bottom: 20px;
+}
+.social-icons {
+    margin-top: 20px;
+}
+.social-icons a {
+    margin: 0 15px;  
+    font-size: 1.5em;  
+}
+.social-icons a i.fa-linkedin {
+    color: #0e76a8;  
+}
+.social-icons a i.fa-github {
+    color: #211F1F;  
+}
+.social-icons a i.fa-twitter {
+    color: #1DA1F2;  
+}
+.api-section {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
