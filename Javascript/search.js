@@ -15,7 +15,7 @@ function searchMovie(){
 }
 
 async function loading(searchValue){
-  let url = `http://www.omdbapi.com/?apikey=7f739014&s=${searchValue}`;
+  let url = `https://www.omdbapi.com/?apikey=7f739014&s=${searchValue}`;
   let movieData = await fetch(url);
   let movieDataJson = await movieData.json();
   
