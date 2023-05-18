@@ -2,7 +2,7 @@ async function loadMovieDetails() {
     const movieId = localStorage.getItem("selectedMovieID");
     const movieDetails = document.getElementById('movieDetails');
 
-    const response = await fetch(`http://www.omdbapi.com/?apikey=7f739014&i=${movieId}`);
+    const response = await fetch(`https://www.omdbapi.com/?apikey=7f739014&i=${movieId}`);
     const movie = await response.json();
     console.log(movie);
 
