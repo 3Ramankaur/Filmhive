@@ -15,29 +15,32 @@ function searchMovie(){
 }
 
 async function loading(searchValue){
-  let url = `https://www.omdbapi.com/?apikey=7f739014&s=${searchValue}`;
+  let url = `https://api.themoviedb.org/3/search/movie?api_key=a871e25dfc6211adfb17ab5730e67358&query=${searchValue}`;
   let movieData = await fetch(url);
   let movieDataJson = await movieData.json();
+  console.log(movieDataJson);
   
-  let movieList = movieDataJson.Search;
+  let movieList = movieDataJson.results;
   
   let movieDetails = document.querySelector("#movieDetails");
   
   let htmlContent = `<div class="container"><div class="row">`;
 
   movieList.forEach(movie => {
-    htmlContent += `
+    if(movie.poster_path){
+      htmlContent += `
       <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
         <div class="card h-100">
-          <img src="${movie.Poster}" class="card-img-top" alt="${movie.Title}">
+          <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" class="card-img-top" alt="${movie.original_title}">
           <div class="card-body">
-            <h5 class="card-title">${movie.Title}</h5>
-            <p class="card-text">Release Year: ${movie.Year}</p>
-            <a href="movieDetails.html" class="btn btn-primary" onclick="storeMovieID('${movie.imdbID}')">More details</a>
+            <h5 class="card-title">${movie.title}</h5>
+            <p class="card-text">Release Year: ${movie.release_date}</p>
+            <a href="movieDetails.html" class="btn btn-primary" onclick="storeMovieID('${movie.id}')">More details</a>
           </div>
         </div>
       </div>
     `;
+    }
   });
 
   htmlContent += `</div></div>`;
@@ -45,6 +48,6 @@ async function loading(searchValue){
   movieDetails.innerHTML = htmlContent;
 }
 
-function storeMovieID(imdbID){
-  localStorage.setItem('selectedMovieID', imdbID);
+function storeMovieID(id){
+  localStorage.setItem('selectedMovieID', id);
 }

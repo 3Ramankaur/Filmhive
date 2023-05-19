@@ -1,4 +1,4 @@
-async function loadMovieDetails() {
+async function loadTrendingDetails() {
     const movieId = localStorage.getItem("selectedMovieID");
     const movieDetails = document.getElementById('movieDetails');
 
@@ -6,7 +6,7 @@ async function loadMovieDetails() {
     const movie = await response.json();
     console.log(movie);
     const genres = movie.genres;
-    const hours = (movie.runtime / 60).toFixed(1);
+    const hours = movie.runtime / 60;
     let detailsHTML = `
     <div class="container my-4">
       <div class="row">
@@ -38,12 +38,15 @@ async function loadMovieDetails() {
         movieDetails.innerHTML = detailsHTML;
     }
 
-    loadMovieDetails();
+    loadTrendingDetails();
 
     function goBackAndSearch() {
-       
+        var lastSearchTerm = localStorage.getItem("lastSearchTerm");
+        if (lastSearchTerm) {
+            window.location.href = `search.html`;
+        } else {
             window.location.href = "../index.html";
-        
+        }
     }
     
   

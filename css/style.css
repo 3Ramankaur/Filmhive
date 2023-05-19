@@ -6,3 +6,10 @@
 {
     margin-bottom: 3vh;
 }
+.carousel-control-prev,
+  .carousel-control-next {
+    width: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    filter: invert(100%);
+  }
