@@ -57,4 +57,3 @@ async function loadMovieDetails() {
           window.location.href = "../index.html";
       }
   }
-  
