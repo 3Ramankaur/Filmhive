@@ -33,17 +33,23 @@ async function loadMovieDetails() {
       </div>
     </div>
   `;
-  
-      
         movieDetails.innerHTML = detailsHTML;
     }
 
     loadMovieDetails();
-
+    
     function goBackAndSearch() {
-       
-            window.location.href = "../index.html";
-        
-    }
+      var lastSearchTerm = localStorage.getItem("lastSearchTerm");
+      if (lastSearchTerm) {
+          window.location.href = `search.html`;
+      } 
+      
+      else {
+          window.location.href = "../index.html";
+      }
+  }
+  
+
+    //if (document.referrer.includes("search.html"))
     
   
