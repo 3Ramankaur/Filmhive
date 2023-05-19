@@ -14,7 +14,7 @@ async function loadMovieDetails() {
           <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" class="img-fluid" alt="${movie.Title}">
         </div>
         <div class="col-lg-8">
-          <h2 class="my-3">${movie.title} (${movie.release_date}) <span class="badge bg-warning text-dark ms-3"><i class="fab fa-imdb"></i> ${movie.vote_average}/10</span></h2>
+          <h2 class="my-3">${movie.title} (${movie.release_date}) <span class="badge bg-warning text-dark ms-3"><i class="fab fa-imdb"></i> ${movie.vote_average.toFixed(1)}/10</span></h2>
           <p class="mb-0"><i class="bi bi-camera-reels"></i> <strong>Genre:</strong></p>
           `
           for(var i=0; i<genres.length;i++){
@@ -41,9 +41,20 @@ async function loadMovieDetails() {
     loadMovieDetails();
 
     function goBackAndSearch() {
-       
-            window.location.href = "../index.html";
-        
-    }
-    
+      var lastSearchTerm = localStorage.getItem("lastSearchTerm");
+      var lastPageVisited = localStorage.getItem("lastPageVisited");
+      
+      if (lastPageVisited === "index") {
+          window.location.href = "../index.html";
+      }
+      else if(lastPageVisited === "topMovies") {
+        window.location.href = "topMovies.html";
+      }
+      else if (lastPageVisited === "search" && lastSearchTerm) {
+          window.location.href = "search.html";
+      } 
+      else {
+          window.location.href = "../index.html";
+      }
+  }
   

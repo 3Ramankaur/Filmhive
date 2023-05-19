@@ -22,7 +22,7 @@ const navbarTemplate = (homeLink, searchLink, topMoviesLink, aboutLink) => `
             <a class="nav-link" href="${searchLink}">Search</a>
           </li>
           <li class="nav-item" data-page="topmovies">
-            <a class="nav-link" href="${topMoviesLink}">Top Movies</a>
+            <a class="nav-link" href="${topMoviesLink}">Popular Movies</a>
           </li>
           <li class="nav-item" data-page="about">
             <a class="nav-link" href="${aboutLink}">About</a>

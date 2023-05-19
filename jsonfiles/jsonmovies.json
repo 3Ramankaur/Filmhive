@@ -1,7 +1,0 @@
-{"Movies":[
-    {"movieName" : "Frozen", "picture" : "frozen.png", "movieYear": 2013},
-    {"movieName" : "Avengers Endgame", "picture" : "avengers.jpg", "movieYear": 2019},
-    {"movieName" : "Turning Red", "picture" : "turningred.png", "movieYear": 2022},
-    {"movieName" : "Onwards", "picture" : "onwards.jpg", "movieYear": 2020},
-    {"movieName" : "Your Name", "picture" : "yourname.jpg", "movieYear": 2016}
-]}

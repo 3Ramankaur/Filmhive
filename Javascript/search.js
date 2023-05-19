@@ -50,4 +50,5 @@ async function loading(searchValue){
 
 function storeMovieID(id){
   localStorage.setItem('selectedMovieID', id);
+  localStorage.setItem("lastPageVisited", "search");
 }
