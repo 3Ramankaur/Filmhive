@@ -48,7 +48,7 @@ This project is open for contributions. Everyone is welcome to contribute. You c
 ## Contact
 Raman - [Github](https://github.com/3ramankaur)
 
-Devesh - [Github](https://github.com/khatterd))
+Devesh - [Github](https://github.com/khatterd)
 
 ## License
 MIT
