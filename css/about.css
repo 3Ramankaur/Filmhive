@@ -34,6 +34,7 @@ body {
 .social-icons a {
     margin: 0 15px;  
     font-size: 1.5em;  
+    text-decoration: none;
 }
 .social-icons a i.fa-linkedin {
     color: #0e76a8;  
@@ -41,8 +42,8 @@ body {
 .social-icons a i.fa-github {
     color: #211F1F;  
 }
-.social-icons a i.fa-twitter {
-    color: #1DA1F2;  
+.social-icons a i.fa-instagram {
+    color: #833AB4;  
 }
 .api-section {
     padding: 50px 0;
