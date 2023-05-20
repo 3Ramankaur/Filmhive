@@ -39,8 +39,8 @@ $ git clone https://github.com/3ramankaur/Filmhive.git
 $ cd Filmhive
 
 # Open index.html
-Open the index.html file in your browser to start exploring movies!
 ```
+Open the index.html file in your browser to start exploring movies!
 
 ## Contributions
 This project is open for contributions. Everyone is welcome to contribute. You can contact us for any additional information.
