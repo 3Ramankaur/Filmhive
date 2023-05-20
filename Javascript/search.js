@@ -31,10 +31,11 @@ async function loading(searchValue){
       htmlContent += `
       <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
         <div class="card h-100">
-          <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" class="card-img-top" alt="${movie.original_title}">
+        <a href="movieDetails.html" onclick="storeMovieID('${movie.id}')">
+        <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" class="card-img-top" alt="${movie.original_title}"></a>
           <div class="card-body">
             <h5 class="card-title">${movie.title}</h5>
-            <p class="card-text">Release Year: ${movie.release_date}</p>
+            <p class="card-text">Release Year: ${new Date(movie.release_date).getFullYear()}</p>
             <a href="movieDetails.html" class="btn btn-primary" onclick="storeMovieID('${movie.id}')">More details</a>
           </div>
         </div>

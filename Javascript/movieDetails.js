@@ -25,7 +25,7 @@ async function loadMovieDetails() {
           }
           detailsHTML+= `
           <p class="mb-0"><i class="bi bi-alarm"></i> <strong>Runtime:</strong> ${hours} hours</p>
-          <p class="mb-0"><i class="bi bi-globe2"></i> <strong>Homepage:</strong> <a href=${movie.homepage}>${movie.homepage}</a></p>
+          <p class="mb-0"><i class="bi bi-globe2"></i> <strong>Homepage:</strong> <a href=${movie.homepage} target = "_blank">${movie.homepage}</a></p>
           <p><i class="bi bi-translate"></i> <strong>Language:</strong> ${movie.original_language}</p>
           <h5 class="my-3">Plot</h5>
           <p>${movie.overview}</p>
@@ -33,8 +33,6 @@ async function loadMovieDetails() {
       </div>
     </div>
   `;
-  
-      
         movieDetails.innerHTML = detailsHTML;
     }
 

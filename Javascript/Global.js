@@ -1,7 +1,7 @@
 const navbarTemplate = (homeLink, searchLink, topMoviesLink, aboutLink) => `
   <nav class="navbar navbar-expand-lg bg-body-tertiary px-4">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">FILMHIVE</a>
+      <a class="navbar-brand" href="${homeLink}">FILMHIVE</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -28,10 +28,15 @@ const navbarTemplate = (homeLink, searchLink, topMoviesLink, aboutLink) => `
             <a class="nav-link" href="${aboutLink}">About</a>
           </li>
         </ul>
+        <form class="d-flex" action="${searchLink}" onsubmit="storeSearchTerm();">
+        <input class="form-control me-2" type="search" id="search-input" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>            
       </div>
     </div>
   </nav>
 `;
+
 
 function loadNavigation(containerId, currentPage) {
   let homeLink, searchLink, topMoviesLink, aboutLink;
@@ -64,4 +69,9 @@ function setActiveNavItem(currentPage) {
     }
   });
 }
+function storeSearchTerm() {
+  var searchTerm = document.getElementById('search-input').value;
+  localStorage.setItem('lastSearchTerm', searchTerm);
+}
+
 
