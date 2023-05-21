@@ -1,7 +1,7 @@
 const navbarTemplate = (homeLink, searchLink, topMoviesLink, aboutLink) => `
   <nav class="navbar navbar-expand-lg bg-body-tertiary px-4">
     <div class="container-fluid">
-      <a class="navbar-brand" href="${homeLink}">FILMHIVE</a>
+      
       <button
         class="navbar-toggler"
         type="button"
@@ -13,7 +13,14 @@ const navbarTemplate = (homeLink, searchLink, topMoviesLink, aboutLink) => `
       >
         <span class="navbar-toggler-icon"></span>
       </button>
+      <a class="navbar-brand mx-auto" href="${homeLink}">FILMHIVE</a>
+      <div class="search-icon-link d-lg-none d-xl-none">
+      <a href="${searchLink}" class="search-icon-link d-lg-none d-xl-none">
+        <i class="bi bi-search"></i> 
+      </a>
+     </div>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      
         <ul class="navbar-nav">
           <li class="nav-item" data-page="home">
             <a class="nav-link" href="${homeLink}">Home</a>
@@ -28,13 +35,14 @@ const navbarTemplate = (homeLink, searchLink, topMoviesLink, aboutLink) => `
             <a class="nav-link" href="${aboutLink}">About</a>
           </li>
         </ul>
-        <form class="d-flex" action="${searchLink}" onsubmit="storeSearchTerm();">
-        <input class="form-control me-2" type="search" id="search-input" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>            
+                 
       </div>
+      
+    </div>
     </div>
   </nav>
+
+
 `;
 
 
