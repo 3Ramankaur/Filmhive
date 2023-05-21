@@ -4,7 +4,6 @@ async function loadMovieDetails() {
 
     const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=a871e25dfc6211adfb17ab5730e67358`);
     const movie = await response.json();
-    console.log(movie);
     const genres = movie.genres;
     const hours = (movie.runtime / 60).toFixed(1);
     let detailsHTML = `
