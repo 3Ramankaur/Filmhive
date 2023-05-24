@@ -1,13 +1,13 @@
 
 
-const navbarTemplate = (homeLink, searchLink, topMoviesLink, aboutLink) => `
+const navbarTemplate = (homeLink, searchLink, topMoviesLink, aboutLink, logoLink) => `
   <nav class="navbar navbar-expand-lg bg-body-tertiary px-4">
     <div class="container-fluid">
       
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-      <a class="navbar-brand mx-auto" href="${homeLink}"><img src="/Assets/images/Filmhive_logo.png" width=180vh></a>
+      <a class="navbar-brand mx-auto" href="${homeLink}"><img src="${logoLink}" width=180vh></a>
       <div class="search-icon-link d-lg-none d-xl-none">
       <a href="${searchLink}" class="search-icon-link d-lg-none d-xl-none">
         <i class="bi bi-search"></i> 
@@ -46,21 +46,23 @@ const navbarTemplate = (homeLink, searchLink, topMoviesLink, aboutLink) => `
 
 
 function loadNavigation(containerId, currentPage) {
-  let homeLink, searchLink, topMoviesLink, aboutLink;
+  let homeLink, searchLink, topMoviesLink, aboutLink, logoLink ;
 
   if (currentPage === 'home') {
     homeLink = 'index.html';
     searchLink = 'pages/search.html';
     topMoviesLink = 'pages/topMovies.html';
     aboutLink = 'pages/About.html';
+    logoLink = `/Assets/images/Filmhive_logo.png`
   } else {
     homeLink = '../index.html';
     searchLink = 'search.html';
     topMoviesLink = 'topMovies.html';
     aboutLink = 'About.html';
+    logoLink = `../Assets/images/Filmhive_logo.png`
   }
 
-  document.getElementById(containerId).innerHTML = navbarTemplate(homeLink, searchLink, topMoviesLink, aboutLink);
+  document.getElementById(containerId).innerHTML = navbarTemplate(homeLink, searchLink, topMoviesLink, aboutLink, logoLink);
 
   setActiveNavItem(currentPage);
 }
