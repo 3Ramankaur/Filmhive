@@ -53,7 +53,7 @@ function loadNavigation(containerId, currentPage) {
     searchLink = 'pages/search.html';
     topMoviesLink = 'pages/topMovies.html';
     aboutLink = 'pages/About.html';
-    logoLink = `/Assets/images/Filmhive_logo.png`
+    logoLink = `Assets/images/Filmhive_logo.png`
   } else {
     homeLink = '../index.html';
     searchLink = 'search.html';
