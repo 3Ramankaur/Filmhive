@@ -1,22 +1,20 @@
-
-
 const navbarTemplate = (homeLink, searchLink, topMoviesLink, aboutLink, logoLink) => `
   <nav class="navbar navbar-expand-lg bg-body-tertiary px-4">
-    <div class="container-fluid">
-      
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
+  <div class="container-fluid no-padding">
+  
+    <button class="navbar-toggler custom-icon-size custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
       <a class="navbar-brand mx-auto" href="${homeLink}"><img src="${logoLink}" width=180vh></a>
       <div class="search-icon-link d-lg-none d-xl-none">
-      <a href="${searchLink}" class="search-icon-link d-lg-none d-xl-none">
+      <a href="${searchLink}" class="search-icon-link d-lg-none d-xl-none custom-icon-size">
         <i class="bi bi-search"></i> 
       </a>
      </div>
-      <div class="offcanvas offcanvas-end " tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+      <div class="offcanvas offcanvas-start " tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
       <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="navbarOffcanvasLgLabel">FILMHIVE</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <a class="navbar-brand" href="${homeLink}"><img src="${logoLink}" width=180vh></a>
+      <button type="button" class="btn-close text-end" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
 
     <div class="offcanvas-body justify-content-end">
@@ -38,12 +36,9 @@ const navbarTemplate = (homeLink, searchLink, topMoviesLink, aboutLink, logoLink
       </div>
       
     </div>
-    </div>
+    </divlass=>
   </nav>
-
-
 `;
-
 
 function loadNavigation(containerId, currentPage) {
   let homeLink, searchLink, topMoviesLink, aboutLink, logoLink ;

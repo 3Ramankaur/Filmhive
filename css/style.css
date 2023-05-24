@@ -15,4 +15,10 @@
   .container {
     position: relative;
   }
-
+  .custom-icon-size {
+    font-size: 1.5rem;
+  }
+  .container-fluid.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
