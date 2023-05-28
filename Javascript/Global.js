@@ -36,7 +36,7 @@ const navbarTemplate = (homeLink, searchLink, topMoviesLink, aboutLink, logoLink
       </div>
       
     </div>
-    </divlass=>
+    </div>
   </nav>
 `;
 
@@ -77,32 +77,3 @@ function storeSearchTerm() {
   var searchTerm = document.getElementById('search-input').value;
   localStorage.setItem('lastSearchTerm', searchTerm);
 }
-
-
-
-var appleTouchIcon = document.createElement("link");
-appleTouchIcon.rel = "apple-touch-icon";
-appleTouchIcon.sizes = "180x180";
-appleTouchIcon.href = "/Assets/Favicon/apple-touch-icon.png";
-document.head.appendChild(appleTouchIcon);
-
-var favicon32x32 = document.createElement("link");
-favicon32x32.rel = "icon";
-favicon32x32.type = "image/png";
-favicon32x32.sizes = "32x32";
-favicon32x32.href = "/Assets/Favicon/favicon-32x32.png";
-document.head.appendChild(favicon32x32);
-
-
-var favicon16x16 = document.createElement("link");
-favicon16x16.rel = "icon";
-favicon16x16.type = "image/png";
-favicon16x16.sizes = "16x16";
-favicon16x16.href = "/Assets/Favicon/favicon-16x16.png";
-document.head.appendChild(favicon16x16);
-
-
-var siteManifest = document.createElement("link");
-siteManifest.rel = "manifest";
-siteManifest.href = "/Assets/Favicon/site.webmanifest";
-document.head.appendChild(siteManifest);
