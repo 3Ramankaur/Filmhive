@@ -1,4 +1,4 @@
-# FilmHive
+<img src="Assets/images/Filmhive_logo.png" alt="Logo" width="200">
 
 FilmHive is a movie information platform, a powerful online database of movie details meticulously designed to give users a seamless movie exploration experience. The website boasts a collection of details about virtually any movie that has ever hit the screens, provided via the [TMDB API](https://developer.themoviedb.org/docs).
 
