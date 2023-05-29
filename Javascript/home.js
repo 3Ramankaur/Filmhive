@@ -12,7 +12,7 @@ function indexload(containerId, currentPage) {
             carouselItemsHTML += `
                 <div class="carousel-item ${i === 0 ? 'active' : ''}">
                     <a href="pages/movieDetails.html" onclick="storeMovieID(${topFiveMovies[i].id})">
-                        <img src="https://image.tmdb.org/t/p/w500/${topFiveMovies[i].poster_path}" class="d-block mx-auto my-auto" alt="..." style="max-width: 500px; max-height: 500px;">
+                        <img src="https://image.tmdb.org/t/p/w500/${topFiveMovies[i].poster_path}" class="d-block mx-auto my-auto" alt="..." id="img" style="max-width: 500px; max-height: 500px;">
                     </a>
                 </div>
             `; 

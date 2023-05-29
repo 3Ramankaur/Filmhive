@@ -1,5 +1,5 @@
 const navbarTemplate = (homeLink, searchLink, topMoviesLink, aboutLink, logoLink) => `
-  <nav class="navbar navbar-expand-lg bg-body-tertiary px-4">
+  <nav class="navbar navbar-expand-lg px-4" style="background-color: #f9edfa;">
   <div class="container-fluid no-padding">
   
     <button class="navbar-toggler custom-icon-size custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">

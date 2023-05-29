@@ -20,3 +20,12 @@
 {
   font-size: 3vh;
 }
+
+body{
+
+  background-color: #f9edfa !important;
+}
+#img
+{
+  border: 10px solid #b2a8e7;
+}

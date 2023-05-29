@@ -9,8 +9,8 @@ body {
     color: #f8f9fa;
 }
 .hero-section {
-    background-color: #17a2b8;
-    color: white;
+    background-color: #b2a8e7;
+    color: #17a2b8;
     padding: 50px 0;
 }
 .hero-section .lead {
@@ -20,7 +20,7 @@ body {
     padding: 50px 0;
 }
 .team-section h4 {
-    color: #17a2b8;
+    color: #f8f9fa;
     margin-bottom: 20px;
 }
 .team-section .icon {
@@ -30,6 +30,9 @@ body {
 }
 .social-icons {
     margin-top: 20px;
+
+
+
 }
 .social-icons a {
     margin: 0 15px;  
@@ -37,16 +40,21 @@ body {
     text-decoration: none;
 }
 .social-icons a i.fa-linkedin {
-    color: #0e76a8;  
+
+
+    color: #17a2b8;  
 }
 .social-icons a i.fa-github {
-    color: #211F1F;  
+    color: #17a2b8;  
 }
 .social-icons a i.fa-instagram {
-    color: #833AB4;  
+    color: #17a2b8;  
 }
 .api-section {
     padding: 50px 0;
     background-color: #f8f9fa;
     color: #343a40;
+}
+.container{
+    color: #04343c;
 }
